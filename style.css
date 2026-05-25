@@ -1,4 +1,9 @@
+html{
+    scroll-behavior:smooth;
+}
+
 /* RESET */
+
 
 *{
     margin:0;
@@ -106,8 +111,10 @@ nav ul li a:hover{
     transition:0.3s;
 }
 
-.btn:hover{
+.btn:hover,
+form button:hover{
     background:#1d4ed8;
+    transform:scale(1.05);
 }
 
 .hero-image{
@@ -169,7 +176,7 @@ nav ul li a:hover{
     padding:30px;
     border-radius:12px;
     text-align:center;
-    transition:0.3s;
+   transition: all 0.3s ease;
 }
 
 .skill-card:hover{
@@ -200,7 +207,7 @@ nav ul li a:hover{
 
     box-shadow:0 5px 15px rgba(0,0,0,0.1);
 
-    transition:0.3s;
+    transition: all 0.3s ease;
 }
 
 .project-card:hover{
