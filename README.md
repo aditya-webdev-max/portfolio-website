@@ -1,0 +1,13 @@
+# Portfolio Website
+
+Frontend portfolio website for internship project using HTML and CSS.
+
+## Features
+- Responsive Design
+- HTML5
+- CSS3
+- Contact Section
+- Social Links
+
+## Author
+Aditya Yadav
