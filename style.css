@@ -162,20 +162,29 @@ nav ul li a:hover{
 /* ABOUT */
 
 .about{
-    padding:80px 10%;
+    padding:90px 10%;
+    background:#f4f7fc;
 }
 
 .about-content{
-    max-width:800px;
+    max-width:850px;
     margin:auto;
-    text-align:center;
+    background:white;
+    padding:40px 50px;
+    border-radius:16px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
 }
 
 .about-content p{
     margin-bottom:20px;
-    font-size:18px;
+    font-size:17px;
+    line-height:1.8;
+    color:#475569;
 }
 
+.about-content p:last-child{
+    margin-bottom:0;
+}
 /* SKILLS */
 
 .skills{
