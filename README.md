@@ -4,8 +4,7 @@ Frontend portfolio website developed for internship project using HTML and CSS.
 
 ## Live Demo
 
-https://portfolio-website-dpnblyjrb-rockaditya.vercel.app
-
+https://portfolio-website-rockaditya.vercel.app/
 ## Features
 
 * Responsive Design
