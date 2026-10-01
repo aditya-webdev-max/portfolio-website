@@ -32,6 +32,9 @@ header{
 
     position:sticky;
     top:0;
+    z-index:1000;
+
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
 }
 
 .logo h1{
@@ -49,15 +52,34 @@ nav ul li{
 }
 
 nav ul li a{
+    position:relative;
     text-decoration:none;
     color:white;
     font-size:16px;
     transition:0.3s;
 }
+nav ul li a::after{
+    content:"";
+
+    position:absolute;
+    left:0;
+    bottom:-6px;
+
+    width:0;
+    height:2px;
+
+    background:#38bdf8;
+
+    transition:0.3s ease;
+}
 
 nav ul li a:hover{
     color:#38bdf8;
 }
+nav ul li a:hover::after{
+    width:100%;
+}
+
 /* HERO SECTION */
 
 .hero{
@@ -386,25 +408,6 @@ form button:hover{
     transform:translateY(-2px);
 }
 
-/* SOCIAL LINKS */
-
-.social-links{
-    margin-top:30px;
-    text-align:center;
-}
-
-.social-links a{
-    text-decoration:none;
-    margin:0 15px;
-    color:#2563eb;
-    font-size:18px;
-    font-weight:600;
-    transition:0.3s;
-}
-
-.social-links a:hover{
-    color:#1d4ed8;
-}
 
 /* FOOTER */
 
@@ -416,6 +419,40 @@ footer{
     padding:20px;
 }
 
+/* BACK TO TOP */
+
+.back-to-top{
+    position:fixed;
+
+    right:25px;
+    bottom:25px;
+
+    width:45px;
+    height:45px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#2563eb;
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:50%;
+
+    font-size:22px;
+    font-weight:600;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+
+    transition:0.3s ease;
+}
+
+.back-to-top:hover{
+    background:#1d4ed8;
+    transform:translateY(-4px);
+}
 /* SOCIAL LINKS */
 
 .social-links{
