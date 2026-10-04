@@ -282,6 +282,23 @@ nav ul li a.active::after{
     margin:auto;
 }
 
+/* PROJECT PREVIEW */
+
+.project-preview{
+    height:180px;
+    background:#f1f5f9;
+    border-radius:12px;
+    margin-bottom:25px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:#64748b;
+    font-size:18px;
+    font-weight:600;
+}
+
 .project-card{
     background:white;
     padding:35px;
@@ -294,8 +311,8 @@ nav ul li a.active::after{
 }
 
 .project-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 15px 30px rgba(0,0,0,0.12);
+    transform:translateY(-10px);
+    box-shadow:0 18px 35px rgba(0,0,0,0.12);
     border-color:#2563eb;
 }
 
@@ -340,16 +357,26 @@ nav ul li a.active::after{
     gap:20px;
 }
 
+/* PROJECT BUTTONS */
+
 .project-links a{
-    color:#2563eb;
+    display:inline-block;
+    padding:10px 18px;
+    border-radius:8px;
+
+    background:#2563eb;
+    color:white;
+
     text-decoration:none;
+    font-size:14px;
     font-weight:600;
-    transition:0.3s;
+
+    transition:0.3s ease;
 }
 
 .project-links a:hover{
-    color:#1d4ed8;
-    transform:translateX(2px);
+    background:#1d4ed8;
+    transform:translateY(-2px);
 }
 
 
@@ -597,8 +624,13 @@ footer{
     }
 
     .project-card{
-        padding:30px 25px;
+        padding:28px 22px;
     }
+
+/* MOBILE PROJECT PREVIEW */
+   .project-preview{
+    height:150px;
+}
 
 }
 
