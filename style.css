@@ -298,7 +298,35 @@ nav ul li a.active::after{
     font-size:18px;
     font-weight:600;
 }
+/* PROJECT PREVIEW IMAGE */
 
+.project-preview img{
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+
+    border-radius:12px;
+
+    display:block;
+} 
+/* PROJECT PREVIEW HOVER */
+
+.project-preview img{
+    transition:0.3s ease;
+}
+
+.project-preview:hover img{
+    transform:scale(1.03);
+}
+/* PROJECT PREVIEW LINK */
+
+.project-preview a{
+    width:100%;
+    height:100%;
+
+    display:block;
+}
 .project-card{
     background:white;
     padding:35px;
