@@ -285,7 +285,7 @@ nav ul li a.active::after{
 /* PROJECT PREVIEW */
 
 .project-preview{
-    height:180px;
+    height:220px;
     background:#f1f5f9;
     border-radius:12px;
     margin-bottom:25px;
@@ -297,6 +297,7 @@ nav ul li a.active::after{
     color:#64748b;
     font-size:18px;
     font-weight:600;
+    overflow:hidden;
 }
 /* PROJECT PREVIEW IMAGE */
 
@@ -374,15 +375,25 @@ nav ul li a.active::after{
 .project-tech span{
     background:#eff6ff;
     color:#2563eb;
-    padding:6px 12px;
+    padding:7px 14px;
     border-radius:20px;
     font-size:13px;
     font-weight:600;
+    border:1px solid #dbeafe;
+    transition:0.3s ease;
+}
+/* PROJECT TECH HOVER */
+
+.project-tech span:hover{
+    background:#2563eb;
+    color:white;
+    transform:translateY(-2px);
 }
 
 .project-links{
     display:flex;
-    gap:20px;
+    gap:15px;
+    flex-wrap:wrap;
 }
 
 /* PROJECT BUTTONS */
@@ -405,6 +416,18 @@ nav ul li a.active::after{
 .project-links a:hover{
     background:#1d4ed8;
     transform:translateY(-2px);
+}
+/* GITHUB PROJECT BUTTON */
+
+.project-links a.project-github{
+    background:transparent;
+    color:#2563eb;
+    border:2px solid #2563eb;
+}
+
+.project-links a.project-github:hover{
+    background:#2563eb;
+    color:white;
 }
 
 
