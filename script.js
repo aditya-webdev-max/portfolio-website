@@ -102,3 +102,28 @@ window.addEventListener("scroll", function() {
     }
 
 });
+
+// MOBILE MENU
+
+const menuToggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector("nav");
+
+menuToggle.addEventListener("click", function() {
+
+    nav.classList.toggle("active");
+
+});
+
+// CLOSE MOBILE MENU AFTER CLICK
+
+const mobileNavLinks = document.querySelectorAll("nav ul li a");
+
+mobileNavLinks.forEach(function(link) {
+
+    link.addEventListener("click", function() {
+
+        nav.classList.remove("active");
+
+    });
+
+});
