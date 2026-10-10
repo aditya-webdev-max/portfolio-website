@@ -101,9 +101,10 @@ window.addEventListener("scroll", function() {
 
     }
 
-});
+    });
 
-// MOBILE MENU
+
+ // MOBILE MENU
 
 const menuToggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector("nav");
@@ -112,7 +113,11 @@ menuToggle.addEventListener("click", function() {
 
     nav.classList.toggle("active");
 
+    // Keep hamburger icon unchanged
+    menuToggle.textContent = "☰";
+
 });
+
 
 // CLOSE MOBILE MENU AFTER CLICK
 
@@ -124,6 +129,10 @@ mobileNavLinks.forEach(function(link) {
 
         nav.classList.remove("active");
 
+        // Reset hamburger icon
+        menuToggle.textContent = "☰"; 
+   
     });
 
 });
+
