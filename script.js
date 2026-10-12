@@ -104,35 +104,63 @@ window.addEventListener("scroll", function() {
     });
 
 
- // MOBILE MENU
+
+
+// MOBILE MENU
 
 const menuToggle = document.querySelector(".menu-toggle");
-const nav = document.querySelector("nav");
+const nav = document.querySelector("#primary-navigation");
+
+function closeMobileMenu() {
+    nav.classList.remove("active");
+
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", "Open navigation menu");
+}
 
 menuToggle.addEventListener("click", function() {
 
-    nav.classList.toggle("active");
+    const isOpen = nav.classList.toggle("active");
 
-    // Keep hamburger icon unchanged
-    menuToggle.textContent = "☰";
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+
+    menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+    );
 
 });
 
 
 // CLOSE MOBILE MENU AFTER CLICK
 
-const mobileNavLinks = document.querySelectorAll("nav ul li a");
+nav.querySelectorAll("a").forEach(function(link) {
 
-mobileNavLinks.forEach(function(link) {
-
-    link.addEventListener("click", function() {
-
-        nav.classList.remove("active");
-
-        // Reset hamburger icon
-        menuToggle.textContent = "☰"; 
-   
-    });
+    link.addEventListener("click", closeMobileMenu);
 
 });
+
+
+// CLOSE MOBILE MENU WITH ESCAPE KEY
+
+document.addEventListener("keydown", function(event) {
+
+    if (event.key === "Escape") {
+        closeMobileMenu();
+        menuToggle.focus();
+    }
+
+});
+
+
+// RESET MENU WHEN SCREEN BECOMES DESKTOP
+
+window.addEventListener("resize", function() {
+
+    if (window.innerWidth > 768) {
+        closeMobileMenu();
+    }
+
+});
+
 
