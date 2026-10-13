@@ -65,25 +65,35 @@ window.addEventListener("scroll", function() {
 
 });
 
+
 // SCROLL REVEAL
 
 const revealElements = document.querySelectorAll(".reveal");
 
-window.addEventListener("scroll", function() {
+// Enable animation only when JavaScript is running
+document.documentElement.classList.add("js-enabled");
+function revealOnScroll() {
+
 
     revealElements.forEach(function(element) {
 
         const elementTop = element.getBoundingClientRect().top;
 
         if (elementTop < window.innerHeight - 100) {
-
             element.classList.add("show");
-
         }
 
     });
 
-});
+}
+
+// Reveal visible sections on page load
+revealOnScroll();
+
+// Reveal remaining sections while scrolling
+window.addEventListener("scroll", revealOnScroll, { passive: true });
+
+
 
 // NAVBAR SCROLL EFFECT
 
@@ -102,8 +112,6 @@ window.addEventListener("scroll", function() {
     }
 
     });
-
-
 
 
 // MOBILE MENU
